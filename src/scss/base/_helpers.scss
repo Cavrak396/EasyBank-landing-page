@@ -1,0 +1,33 @@
+//Body
+body {
+    font-family: "Public Sans";
+
+}
+//Logo and Other components
+
+.logo {
+  max-width: 143px;
+}
+a {
+  text-decoration: none;
+
+  &:hover {
+    opacity: $normal_opacity;
+    transition: $normal;
+  }
+}
+
+
+
+//Wrappers
+
+.wrap {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+//Wrapper for Action and Footer --- Primary width and position
+.wrap--primary {
+    max-width: 1155px; 
+}
+//Wrapper for Navigation and other smaller sections in project --- Primary width and position
+

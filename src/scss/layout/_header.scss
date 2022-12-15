@@ -1,0 +1,122 @@
+//Header properies
+header {
+  position: relative;
+  margin-bottom: 18px;
+}
+//Header position
+.header__line {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+/*HEADER COMPONENTS*/
+.header__logo-link {
+  max-width: 143px;
+  flex: 1 1 143px;
+  padding-top: 16px;
+  display: block;
+  &:hover {
+    opacity: $normal_opacity;
+    transition: $normal;
+  }
+}
+//Header navigation
+.header__navigation {
+  max-width: 351px;
+  flex: 1 1 351px;
+  padding-left: 20px;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 16px;
+}
+.header__list-item {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header__list-link {
+  font-size: 14px;
+  color: $grayish_blue;
+  
+}
+
+//Hamburger menu
+
+.header__hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  //Header position
+  .header__line {
+    padding-top: 21px;
+  }
+  //Logo
+  .header__logo-link {
+    padding-top: 0;
+  }
+
+  //Hamburger
+  .header__hamburger {
+    display: block;
+  }
+
+  .header__hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background-color: $black;
+    margin-bottom: 5px;
+  }
+  //Navigation list
+
+  .header__list {
+    flex-direction: column;
+    position: absolute;
+    z-index:9999;
+    background-color: $white;
+    align-items: center;
+    width: 100%;
+    left: -100%;
+    top: 62px;
+    transition: $fast;
+    .header__list-item {
+      margin: 0 0 17px 0;
+      .header__list-link {
+        font-size: 17px;
+      }
+    }
+  }
+
+  //Header button
+  .header__button {
+    display: none;
+  }
+
+  //Header activation
+  .active {
+    .header__hamburger-bar {
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+        transition: $fast;
+      }
+      &:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+        transition: $fast;
+      }
+    }
+  }
+
+  .active {
+    left: 0;
+  }
+}

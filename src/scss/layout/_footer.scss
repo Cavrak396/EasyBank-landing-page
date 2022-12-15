@@ -1,0 +1,138 @@
+//Footer
+.footer {
+  background-color: $dark_blue;
+}
+.footer__line {
+  display: flex;
+  padding: 47px 0 36px 0
+}
+
+//Footer containers
+
+//Footer social
+.footer__social {
+  max-width: 20%;
+  flex: 1 1 20%;
+  padding-left: 4px;
+}
+.footer__social-logo-linked {
+  display: block;
+  margin-bottom: 51px;
+}
+//Social items
+.footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__social-item {
+  margin-right: 14px;
+}
+.footer__social-icon {
+  font-size: 19px;
+  color: $white;
+  &:hover {
+    color: $lime-green;
+    transition: $normal;
+  }
+}
+
+//Footer navigation and request
+.footer__navigation,
+.footer__request {
+  max-width: 40%;
+  flex: 1 1 40%;
+}
+//Footer request
+.footer__request-holder {
+  max-width: 60%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.footer__request-button {
+  margin: 0 0 28px auto;
+}
+.footer__request-copyright {
+  font-size: 15px;
+  letter-spacing: -0.1px;
+  margin-left: auto;
+}
+//Navigation items
+.footer__navigation-inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 378px;
+  margin: 0 auto;
+}
+.footer__navigation-list {
+  max-width: 50%;
+  flex: 1 1 50%;
+  padding: 6px 0 0 32px;
+}
+.footer__navigation-item {
+  margin-bottom: 18px;
+  a {
+    color: $white;
+    font-size: 14px;
+    &:hover {
+      color: $lime-green;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__line {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+  .footer__social,
+  .footer__navigation,
+  .footer__request {
+    max-width: 100%;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  //Social
+  .footer__social {
+    margin-bottom: 36px;
+  }
+  .footer__social-logo-linked {
+    margin-bottom: 27px;
+  }
+  .footer__social-list {
+    justify-content: center;
+  }
+  .footer__social-item {
+    margin-right: 18px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .footer__social-icon {
+    font-size: 23px;
+  }
+  //Navigation
+  .footer__navigation {
+    margin-bottom: 20px;
+  }
+  .footer__navigation-inner {
+    flex-direction: column;
+  }
+  .footer__navigation-list {
+    max-width: 100%;
+    padding: 0 0 0 1px;
+  }
+  //Request
+  .footer__request-holder {
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: start;
+  }
+  .footer__request-button {
+    margin: 0 auto 27px auto;
+  }
+  .footer__request-copyright {
+    margin: 0 auto;
+  }
+}

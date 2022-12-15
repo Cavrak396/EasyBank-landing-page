@@ -1,0 +1,113 @@
+//Articles
+.articles {
+  margin-bottom: 82px;
+}
+//Articles join text
+.articles__join-text {
+  margin-bottom: 52px;
+}
+//Articles card
+.articles__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -14px;
+}
+.articles__card {
+  max-width: calc(25% - 28px);
+  flex: 1 1 calc(25% - 28px);
+  margin: 0 14px;
+  box-shadow: 5px 5px 10px 2px $grayish_blue;
+  border-radius: 10px;
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+}
+//Articles top ---- link and photo
+.articles__card-top {
+  display: block;
+  position: relative;
+  min-height: 200px;
+  border-radius: 10px 10px 0 0;
+  @include background;
+  &:hover {
+    opacity: 1;
+    filter: brightness(70%);
+  }
+}
+
+//Articles bottom --- link and text props
+.articles__card-bottom {
+  padding: 30px 23px 21px 27px;
+}
+.articles__card-bottom-inner {
+  max-width: 225px;
+}
+.articles__card-author {
+  font-size: 10px;
+  margin-bottom: 13px;
+}
+.articles__card-link {
+  display: block;
+  letter-spacing: -0.3px;
+  line-height: 20px;
+  margin-bottom: 8px;
+  color: $dark_blue;
+  &:hover {
+    color: $lime-green;
+  }
+}
+.articles__card-lines {
+  font-size: 13px;
+  letter-spacing: -0.2px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+  .articles {
+    margin-bottom: 62px;
+  }
+  .articles__join-text {
+    text-align: center;
+  }
+  //Card props
+  .articles__card {
+    max-width: calc(50% - 28px);
+    flex: 1 1 calc(50% - 28px);
+    margin: 0 14px 10px 14px;
+  }
+  .articles__card-bottom {
+    padding: 40px 0;
+  }
+  .articles__card-bottom-inner {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .articles__join-text {
+    margin-bottom: 32px;
+  }
+  //Articles join text
+  .articles__join-header {
+    font-size: 32px;
+    margin-bottom: 17px;
+  }
+
+  //Articles__card
+  .articles__cards {
+    padding: 0 4px;
+  }
+  .articles__card {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 33px;
+    box-shadow: 1px 6px 10px 2px $grayish_blue;
+  }
+  .articles__card-bottom {
+    padding: 31px 0;
+  }
+  .articles__card-bottom-inner {
+    max-width: 268px;
+  }
+}

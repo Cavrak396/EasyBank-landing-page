@@ -1,0 +1,21 @@
+//SCSS
+
+//Abstracts 
+@import "src/scss/abstracts/variables";
+@import "abstracts/mixins";
+
+//Base
+@import "base/reset";
+@import "base/typography";
+@import "base/fonts";
+@import "base/helpers";
+@import "base/icon-font/iconfont.scss";
+//Components 
+@import "components/buttons";
+
+//Layout 
+@import "layout/header";
+@import "layout/action";
+@import "layout/about";
+@import "layout/articles";
+@import "layout/footer";

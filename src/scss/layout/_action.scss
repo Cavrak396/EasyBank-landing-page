@@ -1,0 +1,139 @@
+//Action section
+.action {
+  overflow: hidden;
+  position: relative;
+}
+.action__line {
+  display: flex;
+}
+.action__text,
+.action__image {
+  position: relative;
+}
+.action__text {
+  max-width: 40%;
+  flex: 1 1 40%;
+}
+.action__image {
+  max-width: 60%;
+  flex: 1 1 60%;
+}
+
+//Action text
+.action__text-inner {
+  padding: 171px 0 0 2px;
+  max-width: 451px;
+  margin-bottom: 288px;
+  position: relative;
+  z-index: 9999;
+}
+.action__header {
+  font-size: 58px;
+  letter-spacing: -1.9px;
+  line-height: 62px;
+  margin-bottom: 27px;
+}
+.action__lines {
+  font-size: 18px;
+  letter-spacing: -0.3px;
+  line-height: 28px;
+  margin-bottom: 34px;
+}
+//Action photos
+.action__image-background,
+.action__image-responsive,
+.action__image-main {
+  position: absolute;
+}
+.action__image-background {
+  top: -238px;
+  right: -557px;
+  max-width: 1242px;
+  max-height: 967px;
+  z-index: 1;
+}
+.action__image-main {
+  position: absolute;
+  top: -123px;
+  right: -291px;
+  z-index: 2;
+  max-width: 767px;
+  max-height: 939px;
+}
+.action__image-responsive {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .action {
+    margin-bottom: 164px;
+  }
+  //Text props
+  .action__text-inner {
+    margin: 0 auto;
+  }
+  .action__text {
+    text-align: center;
+  }
+  .action__inner-text {
+    padding: 0;
+  }
+
+  //Images props
+
+  .action__image-responsive {
+    display: block;
+    position: relative;
+  }
+
+  //Columns
+
+  .action__line {
+    flex-direction: column-reverse;
+  }
+  .action__text,
+  .action__image {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .action__image {
+    min-height: 642px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .action__image-background {
+    top: -359px;
+    right: -347px;
+    max-width: 895px;
+    max-height: 694px;
+    z-index: 1;
+  }
+  .action__image-main {
+    position: absolute;
+    top: -127px;
+    right: -4px;
+    z-index: 2;
+    max-width: 349px;
+  }
+  .action__image {
+    max-width: 100%;
+    min-height: 283px;
+  }
+
+  //Action text
+  .action__text-inner {
+    padding: 38px 0 0 0px;
+  }
+  .action__header {
+    font-size: 42px;
+    letter-spacing: -1.8px;
+    line-height: 48px;
+    margin-bottom: 13px;
+  }
+  .action__lines {
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 27px;
+  }
+}
